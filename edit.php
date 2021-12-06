@@ -23,7 +23,7 @@
     $sql = 'SELECT * FROM user WHERE id = ?';
     $stmt = $dbh->prepare($sql);
     /* (1)ここに適切なバインド処理を追加して下さい  */
-    $stmt->bindValue(1,'id', PDO::PARAM_STR);
+    $stmt->bindValue(1,$edit, PDO::PARAM_STR);
     
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
