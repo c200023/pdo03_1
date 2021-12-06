@@ -55,8 +55,10 @@ try{
 <p>データ件数：<?php echo $count;?>件</p>
 
 <div class="container">
+	
 <!--  (1)ここに適切な formタグを追加してください   -->
 <form method="post" action="edit.php">
+	
 <table border=1>
     <tr><th>id</th><th>名前</th><th>メールアドレス</th><th>性別</th><th>選択対象</th></tr>
     <?php foreach($data as $row): ?>
@@ -77,7 +79,7 @@ try{
     </td>
     <td>
         <!--  (2)ここにラジオボタン表示処理を追加して下さい  -->
-        <input type="radio" name="edit" value=""/>編集
+        <input type="radio" name="edit" value=" <?php $row['id']; ?> "/>編集
     </td>
     </tr>
     <?php endforeach; ?>
